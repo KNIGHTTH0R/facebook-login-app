@@ -1,5 +1,12 @@
 <?php
 
+// Helper function for HTTPS
+function https() {
+    global $config;
+
+    return $config["HTTPS"]?"https":"http";
+}
+
 // Instantiate a $fb Object
 function getFBObject() {
     global $config;
@@ -22,7 +29,7 @@ function getFacebookLoginUrl() {
     $helper = $fb->getRedirectLoginHelper();
 
     $permissions = ['email']; // Optional permissions
-    $loginUrl = $helper->getLoginUrl('http://' . $config["Domain"] . '/fb-callback.php', $permissions);
+    $loginUrl = $helper->getLoginUrl(https() . '://' . $config["Domain"] . '/fb-callback.php', $permissions);
 
     return htmlspecialchars($loginUrl);
 }

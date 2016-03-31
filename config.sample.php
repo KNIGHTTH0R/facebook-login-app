@@ -16,6 +16,10 @@ $config["DB"]["User"] = "root";
 $config["DB"]["Password"] = "root";
 $config["DB"]["Database"] = "test";
 
+// The Hosting Server
+$config["Domain"] = "example.com";
+$config["HTTPS"] = true;
+
 
 ?>
 

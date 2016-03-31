@@ -87,6 +87,6 @@ catch(Exception $e) {
 
 // User is logged in with a long-lived access token.
 // Redirect back to main page
-header('Location: http://' . $config["Domain"] . '/');
+header('Location: ' . https() . '://' . $config["Domain"] . '/');
 
 ?>

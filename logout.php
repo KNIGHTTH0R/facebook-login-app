@@ -4,7 +4,8 @@ session_start();
 session_destroy();
 
 require("config.php");
+require("functions.php");
 
 // Now send the user back to the main page
-header("Location: http://" . $config["Domain"] . '/');
+header("Location: " . https() . "://" . $config["Domain"] . '/');
 ?>
