@@ -14,6 +14,7 @@ $config["DB"] = array();
 $config["DB"]["Host"] = "localhost";
 $config["DB"]["User"] = "root";
 $config["DB"]["Password"] = "root";
+$config["DB"]["Database"] = "test";
 
 
 ?>

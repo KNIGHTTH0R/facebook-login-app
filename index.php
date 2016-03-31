@@ -15,6 +15,14 @@ $smarty = new Smarty;
 // Check if the user is logged in
 if (isset($_SESSION['logged-in']) && ($_SESSION['logged-in'] === true)) {
     // User is logged in
+
+    $user = getUserInfo();
+
+    $smarty->assign('user_has_picture', !$user["picture"]["is_silhouette"]);
+    $smarty->assign('name', $user['name']);
+    $smarty->assign('image', $user['picture']['url']);
+
+    $smarty->display("logged-in.tpl");
 }
 else {
     // User is not logged in
